@@ -97,3 +97,57 @@ console.log(users);
 ]
 */
 ```
+
+### Problem 5
+
+Using the same module file. Make a new function that adds a row to the database
+
+#### user.txt
+
+```
+John,30
+Bob,23
+Emily,40
+Michelle,24
+Chris,25
+Robert,28
+Mike,27
+Sarah,22
+```
+
+And:
+
+#### app.js
+```javascript
+const users = UserService.add({name: "Taq", age: 28});
+
+console.log(users);
+/*
+[
+  {name: 'John', age: 30},
+  {name: 'Bob', age: 23},
+  {name: 'Emily', age: 40},
+  {name: 'Michelle', age: 24},
+  {name: 'Chris', age: 25},
+  {name: 'Robert', age: 28},
+  {name: 'Mike', age: 27},
+  {name: 'Sarah', age: 22},
+  {name: 'Taq', age: 28},
+]
+*/
+```
+
+and new user.txt
+
+```
+John,30
+Bob,23
+Emily,40
+Michelle,24
+Chris,25
+Robert,28
+Mike,27
+Sarah,22
+Taq,28
+```
+
