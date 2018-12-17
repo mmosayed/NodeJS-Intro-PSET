@@ -58,8 +58,29 @@ const users = [{
 ];
 
 // UserService.save(users);
+
+
+/*
 let usr = [];
-UserService.load('user.txt', cb => {
+UserService.load(cb => {
     usr = cb;
     console.log(usr);
+});
+*/
+// UserService.add({name: 'Erika',age: 25});
+
+// UserService.add({name: 'Erika',age: 30})
+// UserService.add({name: 'Erika',age: 35})
+
+UserService.save(users, (err, res) => {
+    console.log('saved...?', err, res)
+    UserService.load(allUsers => {
+        console.log('in index.js - ', allUsers)
+        UserService.add({
+            name: 'Erika',
+            age: 35
+        }, (err, res) => {
+            console.log(err, res)
+        });
+    });
 });
